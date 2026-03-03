@@ -1,8 +1,8 @@
 body{
-    background-color: black;
+    background-color: rgb(54, 54, 54);
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: white;
 }
 h1{
-    color:aqua;
+    color:rgb(0, 0, 0);
 }

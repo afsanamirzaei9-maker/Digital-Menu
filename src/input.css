@@ -1,7 +1,120 @@
 @import "tailwindcss";
+/* 
 
+@layer base{
+    :root{
+      --accent: oklch(76.9% 0.188 70.08);
+      --bg-1: #ffff;
+      --bg-2: #eeee;
+      --muted: rgba(255,255,255,0.6);
+    }
+  
+    html, body {
+      height: 100%;
+      color: #e6eef8;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      margin: 0;
+    }
+    @font-face{
+        font-family:"fugazOne" ;
+        src: url("./assests/fonts/FugazOne-Regular.woff2"), format("woff2");
+
+    }
+    @font-face{
+        font-family:"Monoton" ;
+        src: url("./assests/fonts/Monoton-Regular.woff2"), format("woff2");
+
+    }
+  
+    a { color: inherit; text-decoration: none; }
+}*/
 @layer components{
-    
-   
+    /* nav{
+        @apply bg-white absolute top-10 left-30  flex justify-center w-[80%] border border-orange-700 rounded-4xl overflow-hidden text-center shadow-gray-950 shadow-lg;
+    }
+    .navLogo{
+        @apply font-bold text-xl text-orange-700 left-0 w-1/4 h-full py-2 text-shadow-lg;
+        font-family: Monoton;
+    }
+    .navLogo:hover{
+       @apply cursor-pointer;
+    }
+    .nav-ul{
+        @apply flex justify-center w-3/4 h-full text-amber-500;
+    }
+    .nav-link{
+        @apply w-full h-full py-2;
+        font-family: Inter, ui-sans-serif;
+    } */
+    .nav-link:hover{
+        @apply underline text-orange-600;
+        
+    }
+} 
+/*============= header texts style =======*/
+@layer base{
+    body{
+        background-color: whitesmoke;
+    }
+    header h1{
+        @apply text-orange-600;
+        flex-wrap: nowrap;
+        font-size: 45px;
+        font-weight: 700;
+        font-family: fugazOne;
+        line-height: 50px;
+        /* font-family: OleoScript;*/
+        }
+        @media(max-width:768px){
+            header h1{
+                font-size: 25px;
+                line-height: 25px;
 
-}
+            }
+        }
+        @font-face{
+            font-family:"fugazOne" ;
+            src: url("./assests/fonts/FugazOne-Regular.woff2"), format("woff2");
+    
+        }
+        @font-face{
+            font-family:"Monoton" ;
+            src: url("./assests/fonts/Monoton-Regular.woff2"), format("woff2");
+    
+        }
+        .navLogo{
+            @apply font-bold text-xl text-orange-700 left-0 w-1/4 h-full py-2 text-shadow-lg;
+            font-family: Monoton;
+        }
+
+        .floating{
+            animation: float 5s ease-in-out infinite;
+        }
+    
+        @keyframes float{
+        0%{transform: rotate(0deg);}
+        35%{transform: rotate(45deg); }
+        70%{transform: rotate(-45deg);}
+        100%{transform: rotate(0deg);}
+        }
+    
+    }
+        /*
+        p{
+        font-family: sans-serif;
+        letter-spacing: 1px;
+        line-height: 30px
+        
+    }
+}*/
+/*======== button componen t=========*/
+@layer component{
+    .button{
+        @apply bg-orange-700 rounded-3xl p-3 hover:bg-orange-500 hover:border-white hover:shadow-orange-200 shadow-2xl;
+        font-family: Verdana;
+    }
+} 
+
+/*======== services styles ========*/
+

@@ -35,7 +35,7 @@
             
         }
         .navLogo{
-            @apply font-bold text-xl text-orange-700 left-0 w-1/4 h-full py-2 text-shadow-lg;
+            /* @apply font-bold text-xl text-orange-700 left-0 w-1/4 h-full py-2 text-shadow-lg; */
             font-family: Monoton;
         }
         .hero-text{

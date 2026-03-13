@@ -3,179 +3,662 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zyafat Menu</title>
+    <title>Zeyafat Menu</title>
     <link rel="stylesheet" href="../src/output.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <style>
-        .Zheading{
-            font-family: Monoton;
-        }
+      html{
+        scroll-behavior: smooth;
+      }
+      .Zheading{
+        font-family: Monoton;
+      }
     </style>
 </head>
 <body>
-    <section class="min-h-screen bg-gray-100">
-        <!-- MOBILE TOPBAR -->
-        <div class="lg:hidden flex items-center justify-between p-4 bg-white shadow">
-          <button id="openSidebar" class="text-orange-700">
-            <span class="material-symbols-outlined text-3xl">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#c2410c"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
-            </span>
-          </button>
-          <h1 class="font-bold text-lg text-orange-700 Zheading">Zeyafat</h1>
-          <button id="openOrder"class="text-orange-700">
-            <span class="material-symbols-outlined text-3xl">
-                <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#c2410c"><path d="m480-560-56-56 63-64H320v-80h167l-64-64 57-56 160 160-160 160ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"/></svg>
-            </span>
-          </button>
-        </div>
-        <div class="grid lg:grid-cols-[80px_1fr_350px] md:grid-cols-[80px_1fr]">
-            <!-- SIDEBAR -->
-            <aside id="sidebar"
-                class="fixed lg:static top-0 left-0 h-screen w-[80px] bg-white shadow-lg
-                flex flex-col items-center py-6 gap-10
-                transform -translate-x-full md:translate-x-0
-                transition duration-300 z-50">
-                <!-- LOGO -->
-                <div class="text-orange-700 text-sm font-bold">
-                    Zeyafat
+  <section class="min-h-screen bg-gray-200">
+
+    <!-- MOBILE TOPBAR -->
+    <div class="lg:hidden flex items-center justify-between p-4 bg-white shadow">
+      <button id="openSidebar" class="text-orange-700">
+        <span class="material-symbols-outlined text-3xl">
+          <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#F19E39"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </span>
+      </button>
+  
+      <h1 class=" Zheading font-bold text-lg text-orange-700">Zeyafat</h1>
+  
+      <button id="openOrder" class="text-orange-700">
+        <span class="material-symbols-outlined text-3xl">
+          <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#F19E39"><path d="m480-560-56-56 63-64H320v-80h167l-64-64 57-56 160 160-160 160ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"/></svg>
+        </span>
+      </button>
+    </div>
+  
+    <div class="grid lg:grid-cols-[80px_1fr_350px] md:grid-cols-[80px_1fr]">
+  
+      <!-- SIDEBAR -->
+      <aside id="sidebar"
+        class="fixed lg:static top-0 left-0 h-screen w-[80px] bg-white shadow-lg
+        flex flex-col items-center py-6 gap-10
+        transform -translate-x-full md:translate-x-0
+        transition duration-300 z-50">
+
+  
+        <!-- ICONS -->
+        <nav class="flex flex-col gap-8 text-gray-500">
+          <span class="material-symbols-outlined hover:text-orange-700 cursor-pointer">
+            <a href="../index.html">
+              <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#F19E39"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
+            </a>
+          </span>
+          <span class="material-symbols-outlined hover:text-orange-700 cursor-pointer">
+            <a href="../pages/menu.html">
+              <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#F19E39"><path d="M240-80q-50 0-85-35t-35-85v-120h120v-560l60 60 60-60 60 60 60-60 60 60 60-60 60 60 60-60 60 60 60-60v680q0 50-35 85t-85 35H240Zm480-80q17 0 28.5-11.5T760-200v-560H320v440h360v120q0 17 11.5 28.5T720-160ZM360-600v-80h240v80H360Zm0 120v-80h240v80H360Zm320-120q-17 0-28.5-11.5T640-640q0-17 11.5-28.5T680-680q17 0 28.5 11.5T720-640q0 17-11.5 28.5T680-600Zm0 120q-17 0-28.5-11.5T640-520q0-17 11.5-28.5T680-560q17 0 28.5 11.5T720-520q0 17-11.5 28.5T680-480ZM240-160h360v-80H200v40q0 17 11.5 28.5T240-160Zm-40 0v-80 80Z"/></svg>
+            </a>
+          </span>
+          <span class="material-symbols-outlined hover:text-orange-700 cursor-pointer">
+            <a href="../pages/contact.html">
+              <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#F19E39"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/></svg>
+            </a>
+          </span>
+        </nav>
+  
+        <!-- ORDER PANEL BUTTON (TABLET + MOBILE) -->
+        <button id="openOrderTablet" class="mt-auto mb-6 text-orange-700 lg:hidden">
+          <span class="material-symbols-outlined text-3xl">
+          </span>
+        </button>
+      </aside>
+  
+      <!-- MAIN CONTENT -->
+      <main class="p-6 overflow-auto h-screen">
+
+        <!-- main top bar -->
+        <section>
+          <div class="flex items-center justify-between mb-8 flex-wrap gap-4">
+              <!-- TITLE -->
+              <div>
+                <h1 class="text-2xl font-bold text-gray-800">  Food Menu</h1>
+                <p class="text-gray-400 text-sm">Choose your favorite meal</p>
                 </div>
-                <!-- ICONS -->
-                <nav class="flex flex-col gap-8 text-gray-500">
-                    <span class="material-symbols-outlined hover:text-orange-700 cursor-pointer">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#c2410c"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
-                    </span>
-                    <span class="material-symbols-outlined hover:text-orange-700 cursor-pointer">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#c2410c"><path d="M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>        
-                    </span>
-                    <span class="material-symbols-outlined hover:text-orange-700 cursor-pointer">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#c2410c"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/></svg>        
-                    </span>
-                    <span class="material-symbols-outlined hover:text-orange-700 cursor-pointer">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#c2410c"><path d="M240-80q-50 0-85-35t-35-85v-120h120v-560l60 60 60-60 60 60 60-60 60 60 60-60 60 60 60-60 60 60 60-60v680q0 50-35 85t-85 35H240Zm480-80q17 0 28.5-11.5T760-200v-560H320v440h360v120q0 17 11.5 28.5T720-160ZM360-600v-80h240v80H360Zm0 120v-80h240v80H360Zm320-120q-17 0-28.5-11.5T640-640q0-17 11.5-28.5T680-680q17 0 28.5 11.5T720-640q0 17-11.5 28.5T680-600Zm0 120q-17 0-28.5-11.5T640-520q0-17 11.5-28.5T680-560q17 0 28.5 11.5T720-520q0 17-11.5 28.5T680-480ZM240-160h360v-80H200v40q0 17 11.5 28.5T240-160Zm-40 0v-80 80Z"/></svg>
-                    </span>
-                </nav>
-                <!-- ORDER PANEL BUTTON (TABLET + MOBILE) -->
-                <button id="openOrderTablet" class="mt-auto mb-6 text-orange-700 lg:hidden">
-                    <span class="material-symbols-outlined text-3xl">
-                    </span>
+              <!-- RIGHT SECTION -->
+              <div class="flex items-center gap-4 w-full sm:w-auto">
+                <!-- SEARCH -->
+                <div class="relative flex-1 border border-gray-300 sm:flex-none">
+                  <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#F19E39"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
+                  </span>
+                  <input 
+                  id="foodSearch"
+                  type="text"
+                  placeholder="Search food..."
+                  class="pl-10 pr-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500 w-full sm:w-64"
+                  />
+
+                  <ul
+                  id="suggestions"
+                  class="absolute left-0 right-0 bg-white shadow rounded-lg mt-1 hidden max-h-60 overflow-y-auto">
+                  </ul>
+                </div>
+                  
+                <!-- NOTIFICATION -->
+                <button class="relative bg-white border border-gray-200 p-2 rounded-lg hover:bg-gray-50 transition">
+                  <span class="material-symbols-outlined text-gray-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#F19E39"><path d="M160-200v-80h80v-280q0-83 50-147.5T420-792v-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v28q80 20 130 84.5T720-560v280h80v80H160Zm320-300Zm0 420q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-280h320v-280q0-66-47-113t-113-47q-66 0-113 47t-47 113v280Z"/></svg>
+                  </span>
+                  <span class="absolute -top-1 -right-1 bg-orange-700 text-white text-xs w-4 h-4 flex items-center justify-center rounded-full">
+                    2
+                  </span>
                 </button>
-            </aside>
+                <!-- PROFILE -->
+                <div class="flex items-center gap-2 bg-white border border-gray-200 px-3 py-2 rounded-lg">
+                  <img 
+                  src="../src/assests/me3.jpg" 
+                  class="w-8 h-8 rounded-full"
+                  />
+                  <span class="text-sm font-medium text-gray-700 hidden sm:block">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#DA954B"><path d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm146.5-204.5Q340-521 340-580t40.5-99.5Q421-720 480-720t99.5 40.5Q620-639 620-580t-40.5 99.5Q539-440 480-440t-99.5-40.5ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm100-95.5q47-15.5 86-44.5-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160q53 0 100-15.5ZM523-537q17-17 17-43t-17-43q-17-17-43-17t-43 17q-17 17-17 43t17 43q17 17 43 17t43-17Zm-43-43Zm0 360Z"/></svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          
+          </section>
+          <!-- HEADER CARD MAIN CONTENT -->
+          <div class="w-full max-w-6xl mx-auto mb-10 ">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row items-center">
             
-            <!-- MAIN CONTENT -->
-            <main class="p-6">
-                <div class="bg-white rounded-xl p-10 shadow text-center text-gray-400">
-
-                    <!-- TOP BAR -->
-                    <div class="flex items-center justify-between mb-8 flex-wrap gap-4">
-                        <!-- TITLE -->
-                        <div>
-                        <h1 class="text-2xl font-bold text-gray-800">Food Menu</h1>
-                        <p class="text-gray-400 text-sm">Choose your favorite meal</p>
-                        </div>
-                    
-                        <!-- RIGHT SECTION -->
-                        <div class="flex items-center gap-4 w-full sm:w-auto">
-                            
-                            <!-- SEARCH -->
-                            <div class="relative flex-1 sm:flex-none">
-                                <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-lg">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#F19E39"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
-                                </span>
-                                <input id="searchFood" type="text" placeholder="" class="pl-10 pr-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500 w-full sm:w-64"/>
-                            </div>
-
-                            <!-- NOTIFICATION -->
-                            <button class="relative bg-white border border-gray-200 p-2 rounded-lg hover:bg-gray-50 transition">
-                                <span class="material-symbols-outlined text-gray-600">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#F19E39"><path d="M160-200v-80h80v-280q0-83 50-147.5T420-792v-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v28q80 20 130 84.5T720-560v280h80v80H160Zm320-300Zm0 420q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-280h320v-280q0-66-47-113t-113-47q-66 0-113 47t-47 113v280Z"/></svg>
-                                </span>
-                                <span class="absolute -top-1 -right-1 bg-orange-700 text-white text-xs w-4 h-4 flex items-center justify-center rounded-full">
-                                    2
-                                </span>
-                            </button>
-                            <!-- PROFILE -->
-                            <div class="flex items-center gap-2 bg-white border border-gray-200 px-3 py-2 rounded-lg">
-                                <span class="text-sm font-medium text-gray-700 hidden sm:block">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#DA954B"><path d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm146.5-204.5Q340-521 340-580t40.5-99.5Q421-720 480-720t99.5 40.5Q620-639 620-580t-40.5 99.5Q539-440 480-440t-99.5-40.5ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm100-95.5q47-15.5 86-44.5-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160q53 0 100-15.5ZM523-537q17-17 17-43t-17-43q-17-17-43-17t-43 17q-17 17-17 43t17 43q17 17 43 17t43-17Zm-43-43Zm0 360Z"/></svg>                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </main>
-            <!-- ORDEr PANEL DESKTOP -->
-           <aside class="hidden lg:block bg-white p-6 border-l">
-               <div class="text-gray-400 text-center">
-                 Order Panel
-               </div>
-           </aside>
+              <!-- TEXT OVERLAY LEFT -->
+              <div class="md:w-1/2 p-6 md:p-10 flex flex-col justify-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-orange-700 leading-snug">
+                  Let's explore today's menu
+                </h2>
+              </div>
+          
+            <!-- IMAGE RIGHT -->
+            <div class="md:w-1/2 relative w-full h-64 ">
+              <img 
+                src="../src/assests/foods/pizzaes/pizza2.jpg" 
+                alt="Today's Menu" 
+                class="w-full h-full object-cover md:object-right rounded-r-xl md:rounded-l-none"
+              />
+              <!-- GRADIENT MASK LEFT FOR FADE -->
+              <div class="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-white to-transparent"></div>
+            </div>
+          
+          </div>
         </div>
-        <!-- ORDER PANEL OVERLAY -->
-        <div id="orderPanel"
-            class="fixed top-0 right-0 h-screen w-[90%] bg-white shadow-2xl
-            transform translate-x-full transition duration-300 z-50">
-            <div class="p-6">
-                <button id="closeOrder" class="mb-6 text-orange-700">
-                <span class="material-symbols-outlined">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#c2410c"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
-                </span>
-                </button>
-                <div class="text-gray-400 text-center">
-                  Order Panel
-                </div>
-           </div>
-        </div>
-        
-        <!-- BACKDROP -->
-        <div id="backdrop"
-        class="fixed inset-0 bg-black/40 hidden z-40"></div>
-    </section>
 
-    <script>
-        
-        const sidebar = document.getElementById("sidebar");
-        const orderPanel = document.getElementById("orderPanel");
-        const backdrop = document.getElementById("backdrop");
-        
-        const openSidebar = document.getElementById("openSidebar");
-        const openOrder = document.getElementById("openOrder");
-        const openOrderTablet = document.getElementById("openOrderTablet");
-        const closeOrder = document.getElementById("closeOrder");
-        
-        openSidebar.onclick = () => {
-        
-        sidebar.classList.remove("-translate-x-full");
-        backdrop.classList.remove("hidden");
-        
-        };
-        
-        openOrder.onclick = () => {
-        
-        orderPanel.classList.remove("translate-x-full");
-        backdrop.classList.remove("hidden");
-        
-        };
-        
-        openOrderTablet.onclick = () => {
-        
-        orderPanel.classList.remove("translate-x-full");
-        backdrop.classList.remove("hidden");
-        
-        };
-        
-        closeOrder.onclick = () => {
-        
-        orderPanel.classList.add("translate-x-full");
-        backdrop.classList.add("hidden");
-        
-        };
-        
-        backdrop.onclick = () => {
-        
-        sidebar.classList.add("-translate-x-full");
-        orderPanel.classList.add("translate-x-full");
-        backdrop.classList.add("hidden");
-        
-        };
-        
-    </script>
+
+        <!-- FOOD CARDS GRID -->
+        <section class="max-w-7xl mx-auto px-6 py-10">
+          <h1  class="font-bold text-lg text-orange-700 text-center mb-10">Food Categories</h1>
+          <div class="grid gap-8 justify-items-center sm:grid-cols-1 lg:grid-cols-3">
+          
+            <!-- 1. Kabab -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition hover:scale-105 hover:shadow-2xl w-54">
+              <img src="../src/assests/foods/kababs/kabab3.jpg" alt="Kabab" class="w-full h-40 object-cover">
+              <div class="p-4 text-center">
+                <h3 class="text-lg font-bold text-gray-800 mb-1">Kabab</h3>
+                <p class="text-gray-500 text-sm mb-3">Grilled perfection</p>
+                <a href="#kabab" class="inline-block bg-orange-700 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition">
+                  See More
+                </a>
+              </div>
+            </div>
+          
+            <!-- 2. Chips -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition hover:scale-105 hover:shadow-2xl w-54">
+              <img src="../src/assests/foods/chips/chips2.jpg" alt="Chips" class="w-full h-40 object-cover">
+              <div class="p-4 text-center">
+                <h3 class="text-lg font-bold text-gray-800 mb-1">Chips</h3>
+                <p class="text-gray-500 text-sm mb-3">Crispy & golden</p>
+                <a href="#chips" class="inline-block bg-orange-700 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition">
+                  See More
+                </a>
+              </div>
+            </div>
+          
+            <!-- 3. Burger -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition hover:scale-105 hover:shadow-2xl w-54">
+              <img src="../src/assests/foods/burgers/burger2.jpg" alt="Burger" class="w-full h-40 object-cover">
+              <div class="p-4 text-center">
+                <h3 class="text-lg font-bold text-gray-800 mb-1">Burger</h3>
+                <p class="text-gray-500 text-sm mb-3">Juicy & tasty</p>
+                <a href="#burger" class="inline-block bg-orange-700 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition">
+                  See More
+                </a>
+              </div>
+            </div>
+          
+            <!-- 4. Pizza -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition hover:scale-105 hover:shadow-2xl w-54">
+              <img src="../src/assests/foods/pizzaes/pizza1.jpg" alt="Pizza" class="w-full h-40 object-cover">
+              <div class="p-4 text-center">
+                <h3 class="text-lg font-bold text-gray-800 mb-1">Pizza</h3>
+                <p class="text-gray-500 text-sm mb-3">Cheesy delight</p>
+                <a href="#pizza" class="inline-block bg-orange-700 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition">
+                  See More
+                </a>
+              </div>
+            </div>
+          
+            <!-- 5. Dolmeh -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition hover:scale-105 hover:shadow-2xl w-54">
+              <img src="../src/assests/foods/dolmeh/dolmeh9.jpg" alt="Dolmeh" class="w-full h-40 object-cover">
+              <div class="p-4 text-center">
+                <h3 class="text-lg font-bold text-gray-800 mb-1">Dolmeh</h3>
+                <p class="text-gray-500 text-sm mb-3">Stuffed goodness</p>
+                <a href="#dolma" class="inline-block bg-orange-700 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition">
+                  See More
+                </a>
+              </div>
+            </div>
+          
+            <!-- 6. Lasagna -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition hover:scale-105 hover:shadow-2xl w-54">
+              <img src="../src/assests/foods/lasagna/lasagna6.jpg" alt="Lasagna" class="w-full h-40 object-cover">
+              <div class="p-4 text-center">
+                <h3 class="text-lg font-bold text-gray-800 mb-1">Lasagna</h3>
+                <p class="text-gray-500 text-sm mb-3">Layered delight</p>
+                <a href="#lasagna" class="inline-block bg-orange-700 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition">
+                  See More
+                </a>
+              </div>
+            </div>
+          
+            <!-- 7. Seafood -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition hover:scale-105 hover:shadow-2xl w-54">
+              <img src="../src/assests/foods/seaFood/salmon4.jpg" alt="Seafood" class="w-full h-40 object-cover">
+              <div class="p-4 text-center">
+                <h3 class="text-lg font-bold text-gray-800 mb-1">Seafood</h3>
+                <p class="text-gray-500 text-sm mb-3">Fresh & tasty</p>
+                <a href="#seafood" class="inline-block bg-orange-700 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition">
+                  See More
+                </a>
+              </div>
+            </div>
+          
+            <!-- 8. Mantu -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition hover:scale-105 hover:shadow-2xl w-54">
+              <img src="../src/assests/foods/manto/manto3.jpg" alt="Mantu" class="w-full h-40 object-cover">
+              <div class="p-4 text-center">
+                <h3 class="text-lg font-bold text-gray-800 mb-1">Mantu</h3>
+                <p class="text-gray-500 text-sm mb-3">Steamed dumplings</p>
+                <a href="#mantu" class="inline-block bg-orange-700 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition">
+                  See More
+                </a>
+              </div>
+            </div>
+          
+            <!-- 9. Soup -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition hover:scale-105 hover:shadow-2xl w-54">
+              <img src="../src/assests/foods/soup/soup7.jpg" alt="Soup" class="w-full h-40 object-cover">
+              <div class="p-4 text-center">
+                <h3 class="text-lg font-bold text-gray-800 mb-1">Soup</h3>
+                <p class="text-gray-500 text-sm mb-3">Warm & healthy</p>
+                <a href="#soup" class="inline-block bg-orange-700 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition">
+                  See More
+                </a>
+              </div>
+            </div>
+          
+            <!-- 10. Pasta -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition hover:scale-105 hover:shadow-2xl w-54">
+              <img src="../src/assests/foods/pasta/pasta9.jpg" alt="Pasta" class="w-full h-40 object-cover">
+              <div class="p-4 text-center">
+                <h3 class="text-lg font-bold text-gray-800 mb-1">Pasta</h3>
+                <p class="text-gray-500 text-sm mb-3">Classic Italian</p>
+                <a href="#pasta" class="inline-block bg-orange-700 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition">
+                  See More
+                </a>
+              </div>
+            </div>
+          
+            <!-- 11. Spaghetti -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition hover:scale-105 hover:shadow-2xl w-54">
+              <img src="../src/assests/foods/spaghetti/spaghetti11.jpg" alt="Spaghetti" class="w-full h-40 object-cover">
+              <div class="p-4 text-center">
+                <h3 class="text-lg font-bold text-gray-800 mb-1">Spaghetti</h3>
+                <p class="text-gray-500 text-sm mb-3">Tomato delight</p>
+                <a href="#spaghetti" class="inline-block bg-orange-700 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition">
+                  See More
+                </a>
+              </div>
+            </div>
+          
+            <!-- 12. Sambosa -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition hover:scale-105 hover:shadow-2xl w-54">
+              <img src="../src/assests/foods/sambosa/sambosa1.jpg" alt="Sambosa" class="w-full h-40 object-cover">
+              <div class="p-4 text-center">
+                <h3 class="text-lg font-bold text-gray-800 mb-1">Sambosa</h3>
+                <p class="text-gray-500 text-sm mb-3">Crispy snack</p>
+                <a href="#sambosa" class="inline-block bg-orange-700 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition">
+                  See More
+                </a>
+              </div>
+            </div>
+          
+            <!-- 13. Kofta -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition hover:scale-105 hover:shadow-2xl w-54">
+              <img src="../src/assests/foods/Kofta/kofta1.jpg" alt="Kofta" class="w-full h-40 object-cover">
+              <div class="p-4 text-center">
+                <h3 class="text-lg font-bold text-gray-800 mb-1">Kofta</h3>
+                <p class="text-gray-500 text-sm mb-3">Spiced meatballs</p>
+                <a href="#kofta" class="inline-block bg-orange-700 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition">
+                  See More
+                </a>
+              </div>
+            </div>
+          
+            <!-- 14. Salad -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition hover:scale-105 hover:shadow-2xl w-54">
+              <img src="../src/assests/foods/salad/salad9.jpg" alt="Salad" class="w-full h-40 object-cover">
+              <div class="p-4 text-center">
+                <h3 class="text-lg font-bold text-gray-800 mb-1">Salad</h3>
+                <p class="text-gray-500 text-sm mb-3">Fresh greens</p>
+                <a href="#salad" class="inline-block bg-orange-700 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition">
+                  See More
+                </a>
+              </div>
+            </div>
+          
+            <!-- 15. Fruit Salad  -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition hover:scale-105 hover:shadow-2xl w-54">
+              <img src="../src/assests/foods/fruitSalad/fruitSalad3.jpg" alt="Fruit Salad" class="w-full h-40 object-cover">
+              <div class="p-4 text-center">
+                <h3 class="text-lg font-bold text-gray-800 mb-1">Fruit Salad</h3>
+                <p class="text-gray-500 text-sm mb-3">Sweet & healthy</p>
+                <a href="#fruit-salad" class="inline-block bg-orange-700 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition">
+                  See More
+                </a>
+              </div>
+            </div>
+          
+            <!-- 16. Ice Cream -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition hover:scale-105 hover:shadow-2xl w-54">
+              <img src="../src/assests/foods/IceCream/IceCream1.jpg" alt="Ice Cream" class="w-full h-40 object-cover">
+              <div class="p-4 text-center">
+                <h3 class="text-lg font-bold text-gray-800 mb-1">Ice Cream</h3>
+                <p class="text-gray-500 text-sm mb-3">Cold dessert</p>
+                <a href="#ice-cream" class="inline-block bg-orange-700 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition">
+                  See More
+                </a>
+              </div>
+            </div>
+          
+            <!-- 17. Desserts -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition hover:scale-105 hover:shadow-2xl w-54">
+              <img src="../src/assests/foods/Desserts/dessert3.jpg" alt="Desserts" class="w-full h-40 object-cover">
+              <div class="p-4 text-center">
+                <h3 class="text-lg font-bold text-gray-800 mb-1">Desserts</h3>
+                <p class="text-gray-500 text-sm mb-3">Sweet treats</p>
+                <a href="#dessert" class="inline-block bg-orange-700 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition">
+                  See More
+                </a>
+              </div>
+            </div>
+          
+          </div>
+        </section>
+        <hr>
+        <!-- food sections -->
+        <section id="foodSections" class="space-y-24 mt-20 ">
+
+          <!-- Kabab -->
+          <section id="kabab" class="food-section scroll-mt-24">
+          <h2 class="text-3xl font-bold text-gray-800">Kabab</h2>
+          <p class="text-gray-500 mt-2 mb-8">
+          Juicy grilled kababs cooked over charcoal with traditional spices.
+          </p>
+          <div class="food-grid grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"></div>
+          </section>
+          <hr>
+          <!-- Chips -->
+          <section id="chips" class="food-section scroll-mt-24">
+          <h2 class="text-3xl font-bold text-gray-800">Chips</h2>
+          <p class="text-gray-500 mt-2 mb-8">
+          Crispy golden potato chips served fresh and perfectly salted.
+          </p>
+          <div class="food-grid grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"></div>
+          </section>
+          <hr>
+          <!-- Burger -->
+          <section id="burger" class="food-section scroll-mt-24">
+          <h2 class="text-3xl font-bold">Burger</h2>
+          <p class="text-gray-500 mt-2 mb-8">
+          Juicy burgers with melted cheese and fresh ingredients.
+          </p>
+          <div class="food-grid grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"></div>
+          </section>
+          <hr>
+          <!-- Pizza -->
+          <section id="pizza" class="food-section scroll-mt-24">
+          <h2 class="text-3xl font-bold">Pizza</h2>
+          <p class="text-gray-500 mt-2 mb-8">
+          Fresh oven-baked Italian pizzas with rich toppings.
+          </p>
+          <div class="food-grid grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"></div>
+          </section>
+          <hr>
+          <!-- Dolma -->
+          <section id="dolma" class="food-section scroll-mt-24">
+          <h2 class="text-3xl font-bold">Dolma</h2>
+          <p class="text-gray-500 mt-2 mb-8">
+          Traditional stuffed grape leaves with aromatic herbs.
+          </p>
+          <div class="food-grid grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"></div>
+          </section>
+          <hr>
+          <!-- Lasagna -->
+          <section id="lasagna" class="food-section scroll-mt-24">
+          <h2 class="text-3xl font-bold">Lasagna</h2>
+          <p class="text-gray-500 mt-2 mb-8">
+          Layered pasta baked with cheese and rich meat sauce.
+          </p>
+          <div class="food-grid grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"></div>
+          </section>
+          <hr>
+          <!-- Seafood -->
+          <section id="seafood" class="food-section scroll-mt-24">
+          <h2 class="text-3xl font-bold">Seafood</h2>
+          <p class="text-gray-500 mt-2 mb-8">
+          Fresh seafood dishes full of ocean flavor.
+          </p>
+          <div class="food-grid grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"></div>
+          </section>
+          <hr>
+          <!-- Mantu -->
+          <section id="mantu" class="food-section scroll-mt-24">
+          <h2 class="text-3xl font-bold">Mantu</h2>
+          <p class="text-gray-500 mt-2 mb-8">
+          Afghan dumplings filled with spiced meat and yogurt sauce.
+          </p>
+          <div class="food-grid grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"></div>
+          </section>
+          <hr>
+          <!-- Soup -->
+          <section id="soup" class="food-section scroll-mt-24">
+          <h2 class="text-3xl font-bold">Soup</h2>
+          <p class="text-gray-500 mt-2 mb-8">
+          Warm comforting soups prepared with fresh ingredients.
+          </p>
+          <div class="food-grid grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"></div>
+          </section>
+          <hr>
+          <!-- Pasta -->
+          <section id="pasta" class="food-section scroll-mt-24">
+          <h2 class="text-3xl font-bold">Pasta</h2>
+          <p class="text-gray-500 mt-2 mb-8">
+          Classic Italian pasta with rich sauces and herbs.
+          </p>
+          <div class="food-grid grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"></div>
+          </section>
+          <hr>
+          <!-- Spaghetti -->
+          <section id="spaghetti" class="food-section scroll-mt-24">
+          <h2 class="text-3xl font-bold">Spaghetti</h2>
+          <p class="text-gray-500 mt-2 mb-8">
+          Traditional spaghetti served with delicious tomato sauce.
+          </p>
+          <div class="food-grid grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"></div>
+          </section>
+          <hr>
+          <!-- Sambosa -->
+          <section id="sambosa" class="food-section scroll-mt-24">
+          <h2 class="text-3xl font-bold">Sambosa</h2>
+          <p class="text-gray-500 mt-2 mb-8">
+          Crispy pastry pockets filled with savory fillings.
+          </p>
+          <div class="food-grid grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"></div>
+          </section>
+          <hr>
+          <!-- Kofta -->
+          <section id="kofta" class="food-section scroll-mt-24">
+          <h2 class="text-3xl font-bold">Kofta</h2>
+          <p class="text-gray-500 mt-2 mb-8">
+          Seasoned meatballs cooked in flavorful sauces.
+          </p>
+          <div class="food-grid grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"></div>
+          </section>
+          <hr>
+          <!-- Salad -->
+          <section id="salad" class="food-section scroll-mt-24">
+          <h2 class="text-3xl font-bold">Salad</h2>
+          <p class="text-gray-500 mt-2 mb-8">
+          Fresh vegetable salads with healthy ingredients.
+          </p>
+          <div class="food-grid grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"></div>
+          </section>
+          <hr>
+          <!-- Fruit Salad -->
+          <section id="fruit-salad" class="food-section scroll-mt-24">
+          <h2 class="text-3xl font-bold">Fruit Salad</h2>
+          <p class="text-gray-500 mt-2 mb-8">
+          Sweet seasonal fruits mixed in a refreshing bowl.
+          </p>
+          <div class="food-grid grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"></div>
+          </section>
+          <hr>
+          <!-- Ice Cream -->
+          <section id="ice-cream" class="food-section scroll-mt-24">
+          <h2 class="text-3xl font-bold">Ice Cream</h2>
+          <p class="text-gray-500 mt-2 mb-8">
+          Creamy frozen desserts in different delicious flavors.
+          </p>
+          <div class="food-grid grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"></div>
+          </section>
+          <hr>
+          <!-- Desserts -->
+          <section id="dessert" class="food-section scroll-mt-24">
+          <h2 class="text-3xl font-bold">Desserts</h2>
+          <p class="text-gray-500 mt-2 mb-8">
+          Sweet desserts to finish your meal perfectly.
+          </p>
+          <div class="food-grid grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"></div>
+          </section>
+          
+        </section>          
+
+
+          <!-- CTA -->
+          <section class="bg-gray-100 py-20">
+            <div class="max-w-7xl mx-auto mt-10 px-6 flex flex-col md:flex-row items-center justify-between bg-white rounded-3xl shadow-lg overflow-hidden"
+                 data-aos="fade-up" data-aos-duration="1200" data-aos-once="true">
+              
+              <!-- متن CTA -->
+              <div class="text-center md:text-left md:flex-1 md:pr-10 py-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-orange-700 mb-4"
+                    data-aos="fade-right" data-aos-duration="1200" data-aos-delay="200">
+                  Take a break at our Coffee & Dessert Corner!
+                </h2>
+                <p class="text-gray-600 mb-6"
+                   data-aos="fade-right" data-aos-duration="1200" data-aos-delay="400">
+                  Enjoy freshly brewed coffee, delightful pastries, and a relaxing atmosphere. Perfect for any time of day!
+                </p>
+                <a href="./coffee.html" class="inline-block bg-orange-700 text-white font-semibold px-6 py-3 rounded-3xl hover:bg-orange-600 transition"
+                   data-aos="fade-right" data-aos-duration="1200" data-aos-delay="600">
+                  Visit Coffee & Dessert
+                </a>
+              </div>
+          
+              <!-- تصویر CTA -->
+              <div class="md:flex-1 mt-6 md:mt-0 relative"
+                   data-aos="fade-left" data-aos-duration="1200" data-aos-delay="300">
+                <div class="bg-orange-700 w-full h-64 md:h-80 rounded-2xl relative overflow-hidden">
+                  <img src="../src/assests/banners/coffee1.jpg" alt="Coffee & Dessert" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <div class="absolute top-4 right-4 bg-white p-3 rounded-full shadow-lg">
+                  <span class="material-symbols-outlined text-orange-700 text-3xl">coffee</span>
+                </div>
+              </div>
+          
+            </div>
+          </section>
+      </main>
+  
+      <!-- ORDER PANEL DESKTOP -->
+      <aside class="hidden lg:block bg-white p-6 border-l">
+        <div class="text-gray-400 text-center">order panel</div>
+      </aside>
+      <!-- ORDER PANEL -->
+<div id="orderPanel"
+class="fixed top-0 right-0 h-screen w-[90%] lg:w-[350px] bg-white shadow-2xl transform lg:translate-x-0 translate-x-full transition duration-300 z-50 flex flex-col">
+
+<!-- HEADER -->
+<div class="flex justify-between items-center p-4 border-b border-gray-200">
+   <h2 class="text-xl font-bold text-orange-700">Your Order</h2>
+   <button id="closeOrder" class="text-orange-700 lg:hidden">
+       <span class="material-symbols-outlined text-3xl">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#F19E39"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+      </span>
+   </button>
+</div>
+
+<!-- ORDER ITEMS SECTION -->
+<div class="flex-1 overflow-y-auto p-4 space-y-4">
+   <!-- آیتم ها با JS اضافه می‌شوند -->
+</div>
+
+<!-- total -->
+<div class="p-4 borfer-t flex justify-between font-semibold text-lg"> 
+  <span>Total:</span>
+  <span id="orderTotal">$0</span>
+</div>
+<!-- PAYMENT FORM SECTION -->
+<div class="p-4 border-t border-gray-200 bg-gray-50">
+   <h3 class="text-lg font-semibold text-gray-700 mb-3">Payment Details</h3>
+   <form class="space-y-3">
+       <input type="text" placeholder="Name on Card" class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-700">
+       <input type="text" placeholder="Card Number" class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-700">
+       <div class="flex gap-2">
+           <input type="text" placeholder="MM/YY" class="flex-1 p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-700">
+           <input type="text" placeholder="CVC" class="w-24 p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-700">
+       </div>
+       <button type="submit" class="w-full bg-orange-700 text-white p-3 rounded-lg hover:bg-orange-600 font-semibold">Place Order</button>
+   </form>
+</div>
+
+</div>
+
+<!-- BACKDROP -->
+<div id="backdrop" class="fixed inset-0 bg-black/40 hidden z-40">
+</div>
+
+
+    </div>
+  
+ 
+
+</section>
+
+<script>
+  const sidebar = document.getElementById("sidebar");
+  const orderPanel = document.getElementById("orderPanel");
+  const backdrop = document.getElementById("backdrop");
+
+  const openSidebar = document.getElementById("openSidebar");
+  const openOrder = document.getElementById("openOrder");
+  const openOrderTablet = document.getElementById("openOrderTablet");
+  const closeOrder = document.getElementById("closeOrder");
+
+  openSidebar.onclick = () => {
+    sidebar.classList.remove("-translate-x-full");
+    backdrop.classList.remove("hidden");
+  };
+
+  openOrder.onclick = () => {
+    orderPanel.classList.remove("translate-x-full");
+    backdrop.classList.remove("hidden");
+  };
+
+  openOrderTablet.onclick = () => {
+    orderPanel.classList.remove("translate-x-full");
+    backdrop.classList.remove("hidden");
+  };
+
+  closeOrder.onclick = () => {
+    orderPanel.classList.add("translate-x-full");
+    backdrop.classList.add("hidden");
+  };
+
+  backdrop.onclick = () => {
+    sidebar.classList.add("-translate-x-full");
+    orderPanel.classList.add("translate-x-full");
+    backdrop.classList.add("hidden");
+  };
+</script>
+  <script src="data.js"></script>
+
+
+      <!-- AOS script -->
+      <script>
+        AOS.init({
+        duration: 1000,
+        once: true
+        });
+      </script>
+ 
 </body>
 </html>
